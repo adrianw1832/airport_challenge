@@ -1,17 +1,59 @@
-Airport Challenge
-=================
+##Airport Challenge
 [![Build Status](https://travis-ci.org/makersacademy/airport_challenge.svg?branch=master)](https://travis-ci.org/makersacademy/airport_challenge)
 
-What I did
-----------
-I went through the challenge systematically. I first started test driving the creation of the airport, building in the capacity feature
-after that. Then, I wrote the tests and added the landing method, and that also allowed me to test the landing more plans when airport is
-full feature. Then I worked on the counterpart to landing, the take off method. After that, I test drove the developement of the Plane class, with the 'flying' and 'landed' states. I also added two methods, flying? and landed? to the class. Following the instruction in the plane spec file, I realised the state of the plane needed to change after calling the landing and take off method, so I implemented the land and fly method. They were unit tested under plane spec and additional tests about the plane expecting to receive these methods were written under airport spec. Lastly, I went on the implementation of the random weather feature. Whilst writing the change weather method tests, I thought it would be easiest to control test (but still remaining random if necessary) if the method had an argument. After its implementation, I realised I could use rand as a default to keep the code cleaner, rather than having to use change_weather(rand(5)). Didn't really do any refactoring in the end since I set up the tests nicely at the beginning and even though some tests are redundant, like the 'expect to respond to' ones, I kept them in for completion's sake. PS Totally forgotten to regularly commit until I actually finished... Will make a mental note to self.
+This project is from the week 1 weekend challenge of the Makers Academy course.
+This project aims to model planes taking off and landing at the airport with a
+random weather element. Despite feeling uneasy about TDD earlier in the week, I
+actually managed to TDD most if not all of the code. Once again, I forgot to use
+Github until over half way through the project. The code could have been cleaner
+but I don't think I implemented the bonus part that well, since I might well
+have misunderstood it.
 
-Assuming I understood the bonus part correctly, I am meant to write the Rspec tests for two methods that can land or take off several planes at the same time. I approached them like the singular methods but just with slight modifications. I just copied my tests for the existig methods and changed them as I saw fit. The implementation of landing was trickier than for taking off, but nothing too major. I refactored the code a bit at the end, gropuing the two sets of method together. I found an error when I feature tested in irb after refactoring and after some 'p' debugging, solved the problem by calling flatten.
+I went through the challenge systematically. I first started test driving the
+creation of the airport, building in the capacity feature after that. Then, I
+wrote the tests and added the landing method, and that also allowed me to test
+the landing more plans when airport is full feature. Then I worked on the
+counterpart to landing, the take off method. After that, I test drove the
+developement of the Plane class, with the 'flying' and 'landed' states. I also
+added two methods, flying? and landed? to the class. Following the instruction
+in the plane spec file, I realised the state of the plane needed to change after
+calling the landing and take off method, so I implemented the land and fly
+method. They were unit tested under plane spec and additional tests about the
+plane expecting to receive these methods were written under airport spec.
+Lastly, I went on the implementation of the random weather feature. Whilst
+writing the change weather method tests, I thought it would be easiest to
+control test (but still remaining random if necessary) if the method had an
+argument. After its implementation, I realised I could use rand as a default to
+keep the code cleaner, rather than having to use change_weather(rand(5)). Didn't
+really do any refactoring in the end since I set up the tests nicely at the
+beginning and even though some tests are redundant, like the 'expect to respond
+to' ones, I kept them in for completion's sake.
 
-Instructions
----------
+##Challenges
+
+Assuming I understood the bonus part correctly, I am meant to write the RSpec
+tests for two methods that can land or take off several planes at the same time.
+I approached them like the singular methods but just with slight modifications.
+I just copied my tests for the existing methods and changed them as I saw fit.
+The implementation of landing was trickier than for taking off, but nothing too
+major. I refactored the code a bit at the end, grouping the two sets of method
+together. I found an error when I feature tested in IRB after refactoring and
+after some 'p' debugging, solved the problem by calling flatten.
+
+After the code review, I realised that I could have put the weather into a
+module too, and I changed some of my variable and method naming due to feedback.
+
+##Technologies used
+
+Ruby
+
+RSpec
+
+##How to install
+
+Simply clone the repo and play around in IRB.
+
+##Instructions
 
 * Challenge time: rest of the day and weekend, until Monday 9am
 * Feel free to use google, your notes, books, etc but work on your own

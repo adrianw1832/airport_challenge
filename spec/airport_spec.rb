@@ -1,5 +1,4 @@
 require 'airport'
-require 'plane'
 
 ## Note these are just some guidelines!
 ## Feel free to write more tests!!
