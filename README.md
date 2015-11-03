@@ -53,6 +53,8 @@ RSpec
 
 Simply clone the repo and play around in IRB.
 
+Tests can be run by running rspec in the terminal.
+
 ##Instructions
 
 * Challenge time: rest of the day and weekend, until Monday 9am
